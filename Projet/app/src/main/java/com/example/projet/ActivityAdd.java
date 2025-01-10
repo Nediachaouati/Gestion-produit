@@ -63,7 +63,7 @@ public class ActivityAdd extends AppCompatActivity {
 
                 Intent intent = new Intent(ActivityAdd.this, MainActivity.class);
                 startActivity(intent);
-                finish();  // Fermer l'Activity actuelle pour empêcher de revenir en arrière
+                finish();  
             }
         });
     }
