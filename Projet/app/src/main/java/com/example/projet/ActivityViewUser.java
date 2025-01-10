@@ -82,20 +82,19 @@ public class ActivityViewUser extends AppCompatActivity {
         });
 
 
-        // Bouton "Logout" (Déconnexion)
+        // Bouton Logout
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Effacer les informations de session
+      
                 SharedPreferences sharedPreferences = getSharedPreferences("UserSession", Context.MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.clear();  // Effacer toutes les données stockées
                 editor.apply();
 
-                // Rediriger l'utilisateur vers l'écran de connexion (MainActivity)
                 Intent intent = new Intent(ActivityViewUser.this, MainActivity.class);
                 startActivity(intent);
-                finish();  // Fermer l'Activity actuelle pour empêcher de revenir en arrière
+                finish();  
             }
         });
     }
